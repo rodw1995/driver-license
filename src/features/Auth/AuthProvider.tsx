@@ -2,6 +2,7 @@ import { useApolloClient } from '@apollo/react-hooks';
 import Auth, { CognitoUser } from '@aws-amplify/auth';
 import useDidMount from '@rooks/use-did-mount';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
+import useCancelablePromise from '../../hooks/useCancelablePromise';
 import createContext from '../../utils/createContext';
 
 type AuthContextValue = {
@@ -20,11 +21,12 @@ type AuthProviderProps = {
 
 export default ({ children }: AuthProviderProps) => {
   const apolloClient = useApolloClient();
+  const makeCancelable = useCancelablePromise();
 
   const userRef = useRef<CognitoUser | undefined>(undefined);
   const [state, setState] = useState<AuthContextValue['state']>('idle');
 
-  const handleUserPromise = useCallback((promise: Promise<CognitoUser>) => promise
+  const handleUserPromise = useCallback((promise: Promise<CognitoUser>) => makeCancelable(promise)
     .then((user) => {
       userRef.current = user;
       setState('signedIn');
@@ -36,7 +38,7 @@ export default ({ children }: AuthProviderProps) => {
       setState('signedOut');
 
       throw err;
-    }), []);
+    }), [makeCancelable]);
 
   const signIn = useCallback<AuthContextValue['signIn']>((email, password) => {
     setState('signingIn');
@@ -47,7 +49,7 @@ export default ({ children }: AuthProviderProps) => {
   const signOut = useCallback(() => {
     setState('signingOut');
 
-    return Auth.signOut()
+    return makeCancelable(Auth.signOut())
       .then(() => {
         userRef.current = undefined;
         setState('signedOut');
@@ -60,7 +62,7 @@ export default ({ children }: AuthProviderProps) => {
 
         throw err;
       });
-  }, [apolloClient]);
+  }, [makeCancelable, apolloClient]);
 
   // Try to fetch the authenticated user on mount
   useDidMount(() => {
