@@ -1,0 +1,20 @@
+{
+    "local": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-driver-license-local-111559-authRole",
+            "UnauthRoleArn": "arn:aws:iam::499625625660:role/amplify-driver-license-local-111559-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::499625625660:role/amplify-driver-license-local-111559-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-driver-license-local-111559-deployment",
+            "UnauthRoleName": "amplify-driver-license-local-111559-unauthRole",
+            "StackName": "amplify-driver-license-local-111559",
+            "StackId": "arn:aws:cloudformation:eu-west-1:499625625660:stack/amplify-driver-license-local-111559/7ba2cec0-5f93-11ea-8d0c-06e58f87e324",
+            "AmplifyAppId": "d51p3chrruy9m"
+        },
+        "categories": {
+            "auth": {
+                "driverlicense6e33ed06": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+type Lesson
+  @model
+  @auth(rules: [{allow: owner}])
+  @key(name: "ByOwnerDate", fields: ["owner", "date"], queryField: "lessonsByOwner")
+{
+  id: ID!
+  owner: String!
+  date: AWSDateTime!
+  duration: Int!
+  focusPoints: [String!]
+  score: Int
+  retrospective: String
+}
