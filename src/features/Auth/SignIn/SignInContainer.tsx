@@ -1,5 +1,5 @@
+import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import React, { useCallback } from 'react';
-import useCancelablePromise from '../../../hooks/useCancelablePromise';
 import { useAuthContext } from '../AuthProvider';
 import SignInPage, { FormData } from './SignInPage';
 

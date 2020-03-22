@@ -1,7 +1,7 @@
 import Auth from '@aws-amplify/auth';
+import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import React, { useCallback } from 'react';
 import { useParams } from 'react-router-dom';
-import useCancelablePromise from '../../../hooks/useCancelablePromise';
 import ConfirmForgotPasswordPage, { FormData } from './ConfirmForgotPasswordPage';
 
 const ConfirmForgotPasswordContainer = () => {

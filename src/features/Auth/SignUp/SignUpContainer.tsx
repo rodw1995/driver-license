@@ -1,6 +1,6 @@
 import Auth from '@aws-amplify/auth';
+import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import React, { useCallback } from 'react';
-import useCancelablePromise from '../../../hooks/useCancelablePromise';
 import SignUpPage, { FormData } from './SignUpPage';
 
 const SignUpContainer = () => {

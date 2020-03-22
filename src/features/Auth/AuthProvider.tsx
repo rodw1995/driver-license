@@ -1,8 +1,8 @@
 import { useApolloClient } from '@apollo/react-hooks';
 import Auth, { CognitoUser } from '@aws-amplify/auth';
+import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import useDidMount from '@rooks/use-did-mount';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
-import useCancelablePromise from '../../hooks/useCancelablePromise';
 import createContext from '../../utils/createContext';
 
 type AuthContextValue = {

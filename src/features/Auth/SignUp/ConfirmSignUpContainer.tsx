@@ -1,7 +1,8 @@
 import Auth from '@aws-amplify/auth';
+import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import React, { useCallback } from 'react';
 import { useParams } from 'react-router-dom';
-import useCancelablePromise from '../../../hooks/useCancelablePromise';
+import noop from '../../../utils/noop';
 import ConfirmSignUpPage, { FormData } from './ConfirmSignUpPage';
 
 const ConfirmSignUpContainer = () => {
@@ -14,7 +15,7 @@ const ConfirmSignUpContainer = () => {
   );
 
   const resend = useCallback(
-    () => makeCancelable(Auth.resendSignUp(email)),
+    () => makeCancelable(Auth.resendSignUp(email).then(noop)),
     [makeCancelable, email],
   );
 

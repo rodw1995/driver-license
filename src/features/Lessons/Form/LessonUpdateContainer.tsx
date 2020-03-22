@@ -1,4 +1,5 @@
 import { useMutation, useQuery } from '@apollo/react-hooks';
+import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import gql from 'graphql-tag';
 import React, { useCallback } from 'react';
 import { Redirect, useParams } from 'react-router-dom';
@@ -12,7 +13,6 @@ import { LESSONS_ROUTE } from '../../../app/consumers/routes';
 import LoadingPage from '../../../components/LoadingPage';
 import { updateLesson } from '../../../graphql/mutations';
 import { getLesson } from '../../../graphql/queries';
-import useCancelablePromise from '../../../hooks/useCancelablePromise';
 import { formDataToLesson, LessonFormData, lessonToFormData, toLesson } from '../lessonType';
 import LessonFormPage from './LessonFormPage';
 

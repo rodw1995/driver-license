@@ -1,9 +1,9 @@
 import { useMutation } from '@apollo/react-hooks';
+import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import gql from 'graphql-tag';
 import React, { useCallback } from 'react';
 import { CreateLessonMutation, CreateLessonMutationVariables } from '../../../API';
 import { createLesson } from '../../../graphql/mutations';
-import useCancelablePromise from '../../../hooks/useCancelablePromise';
 import useOwner from '../../../hooks/useOwner';
 import { formDataToLesson, LessonFormData } from '../lessonType';
 import useFetchLessonsCacheHelper, { upsertToCache } from '../useFetchLessonsCacheHelper';

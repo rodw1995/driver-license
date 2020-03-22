@@ -14,7 +14,7 @@ import Consumers from './consumers';
 Amplify.register(Auth);
 Amplify.configure(awsconfig);
 
-const App = () => (
+export default () => (
   <ApolloProvider client={apolloClient}>
     <AuthProvider>
       <ThemeProvider theme={theme}>
@@ -26,5 +26,3 @@ const App = () => (
     </AuthProvider>
   </ApolloProvider>
 );
-
-export default App;
