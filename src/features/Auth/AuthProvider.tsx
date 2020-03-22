@@ -5,7 +5,7 @@ import useDidMount from '@rooks/use-did-mount';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import createContext from '../../utils/createContext';
 
-type AuthContextValue = {
+export type AuthContextValue = {
   state: 'idle' | 'signingIn' | 'signedIn' | 'signingOut' | 'signedOut',
   user?: CognitoUser,
   signIn: (email: string, password: string) => Promise<CognitoUser>,

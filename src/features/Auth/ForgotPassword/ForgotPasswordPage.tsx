@@ -43,6 +43,7 @@ const ForgotPasswordPage = ({ forgotPassword }: ForgotPasswordPageProps) => {
         <TextField
           inputRef={register(authValidationRules.email)}
           autoFocus
+          id="email-address"
           label="Email Address"
           name="email"
           error={!!errors.email}

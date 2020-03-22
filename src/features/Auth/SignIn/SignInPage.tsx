@@ -34,10 +34,11 @@ const SignInPage = ({ signIn }: SignInViewProps) => {
 
   return (
     <MinimalPage title="Sign In">
-      <form className={formClasses.form} onSubmit={onSubmit}>
+      <form className={formClasses.form} onSubmit={onSubmit} data-testid="sign-in-form">
         <TextField
           inputRef={register(authValidationRules.email)}
           autoFocus
+          id="email-address"
           label="Email Address"
           name="email"
           error={!!errors.email}
@@ -47,6 +48,7 @@ const SignInPage = ({ signIn }: SignInViewProps) => {
           inputRef={register(authValidationRules.password)}
           type="password"
           autoComplete="current-password"
+          id="password"
           label="Password"
           name="password"
           error={!!errors.password}

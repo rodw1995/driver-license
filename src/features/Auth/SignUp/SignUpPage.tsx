@@ -55,6 +55,7 @@ const SignUpPage = ({ signUp }: SignUpPageProps) => {
       <form className={formClasses.form} onSubmit={onSubmit}>
         <TextField
           inputRef={register(authValidationRules.email)}
+          id="email-address"
           label="Email Address"
           name="email"
           required
@@ -64,6 +65,7 @@ const SignUpPage = ({ signUp }: SignUpPageProps) => {
         <TextField
           inputRef={register(authValidationRules.newPassword)}
           type="password"
+          id="password"
           label="Password"
           name="password"
           required
@@ -73,6 +75,7 @@ const SignUpPage = ({ signUp }: SignUpPageProps) => {
         <TextField
           inputRef={register(authValidationRules.passwordConfirmation(password))}
           type="password"
+          id="password-confirmation"
           label="Password Confirmation"
           name="passwordConfirmation"
           required

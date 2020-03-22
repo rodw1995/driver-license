@@ -60,6 +60,7 @@ const ConfirmSignUpPage = ({ confirm, resend }: ConfirmUserViewProps) => {
         <TextField
           inputRef={register(authValidationRules.confirmationCode)}
           autoFocus
+          id="code"
           label="Code"
           name="code"
           error={!!errors.code}

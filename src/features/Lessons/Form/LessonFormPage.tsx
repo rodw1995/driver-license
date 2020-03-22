@@ -70,6 +70,7 @@ const LessonFormPage = ({ data, action }: LessonFormPageProps) => {
           InputLabelProps={{
             shrink: true,
           }}
+          id="date"
           label="Date"
           name="date"
           required
@@ -84,6 +85,7 @@ const LessonFormPage = ({ data, action }: LessonFormPageProps) => {
             min: 60,
             max: 120,
           }}
+          id="duration"
           label="Duration (in minutes)"
           name="duration"
           required
@@ -93,6 +95,7 @@ const LessonFormPage = ({ data, action }: LessonFormPageProps) => {
         <TextField
           inputRef={register(lessonValidationRules.focusPoints)}
           defaultValue={data?.focusPoints}
+          id="focus-points"
           label="Focus points (comma separated)"
           name="focusPoints"
           error={!!errors.focusPoints}
@@ -106,6 +109,7 @@ const LessonFormPage = ({ data, action }: LessonFormPageProps) => {
             min: 1,
             max: 10,
           }}
+          id="score"
           label="Score"
           name="score"
           error={!!errors.score}
@@ -116,6 +120,7 @@ const LessonFormPage = ({ data, action }: LessonFormPageProps) => {
           defaultValue={data?.retrospective}
           multiline
           rows="4"
+          id="retrospective"
           label="Retrospective"
           name="retrospective"
           error={!!errors.retrospective}

@@ -49,6 +49,7 @@ const ConfirmForgotPasswordPage = ({ confirm }: ForgotPasswordPageProps) => {
       <form className={formClasses.form} onSubmit={onSubmit}>
         <TextField
           inputRef={register(authValidationRules.confirmationCode)}
+          id="code"
           label="Code"
           name="code"
           required
@@ -58,6 +59,7 @@ const ConfirmForgotPasswordPage = ({ confirm }: ForgotPasswordPageProps) => {
         <TextField
           inputRef={register(authValidationRules.newPassword)}
           type="password"
+          id="password"
           label="New Password"
           name="password"
           required
@@ -67,6 +69,7 @@ const ConfirmForgotPasswordPage = ({ confirm }: ForgotPasswordPageProps) => {
         <TextField
           inputRef={register(authValidationRules.passwordConfirmation(password))}
           type="password"
+          id="password-confirmation"
           label="New Password Confirmation"
           name="passwordConfirmation"
           required

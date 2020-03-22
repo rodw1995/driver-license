@@ -9,6 +9,7 @@ A hobby **React + TypeScript** project to learn and try some new things:
 - GraphQL
 - Apollo
 - RamdaJS
+- Jest
 
 Other included libraries:
 
