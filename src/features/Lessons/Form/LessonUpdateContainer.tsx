@@ -9,7 +9,7 @@ import {
   UpdateLessonMutation,
   UpdateLessonMutationVariables,
 } from '../../../API';
-import { LESSONS_ROUTE } from '../../../app/consumers/routes';
+import { LESSONS_ROUTE } from '../../../app/routes';
 import LoadingPage from '../../../components/LoadingPage';
 import { updateLesson } from '../../../graphql/mutations';
 import { getLesson } from '../../../graphql/queries';

@@ -3,7 +3,7 @@ import { useSnackbar } from 'notistack';
 import { allPass, flip, has, includes, not, pipe, propEq, propSatisfies } from 'ramda';
 import { useCallback } from 'react';
 import { generatePath, useHistory } from 'react-router-dom';
-import { SIGN_UP_CONFIRM_ROUTE, SIGN_UP_ROUTE } from '../../app/consumers/routes';
+import { SIGN_UP_CONFIRM_ROUTE, SIGN_UP_ROUTE } from '../../app/routes';
 
 export const hasErrorCode = (code: string) => allPass([
   isPlainObject, has('code'), propEq('code', code),

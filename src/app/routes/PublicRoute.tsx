@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route, RouteProps } from 'react-router-dom';
-import useIsAuthenticated from '../../../hooks/useIsAuthenticated';
+import useIsAuthenticated from '../../hooks/useIsAuthenticated';
 
 type PublicRouteProps = RouteProps & {
   restricted?: boolean,

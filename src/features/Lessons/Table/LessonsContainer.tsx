@@ -5,7 +5,7 @@ import { propEq } from 'ramda';
 import React, { useCallback } from 'react';
 import { generatePath, useHistory } from 'react-router-dom';
 import { DeleteLessonMutation } from '../../../API';
-import { LESSON_CREATE_ROUTE, LESSON_UPDATE_ROUTE } from '../../../app/consumers/routes';
+import { LESSON_CREATE_ROUTE, LESSON_UPDATE_ROUTE } from '../../../app/routes';
 import { deleteLesson } from '../../../graphql/mutations';
 import useFetchLessons from '../useFetchLessons';
 import useFetchLessonsCacheHelper, { removeFromCache } from '../useFetchLessonsCacheHelper';

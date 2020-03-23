@@ -4,7 +4,7 @@ import { andThen, otherwise, pipe } from 'ramda';
 import React, { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { generatePath, Link as RouterLink, useHistory } from 'react-router-dom';
-import { SIGN_IN_ROUTE, SIGN_UP_CONFIRM_ROUTE } from '../../../app/consumers/routes';
+import { SIGN_IN_ROUTE, SIGN_UP_CONFIRM_ROUTE } from '../../../app/routes';
 import MinimalPage from '../../../components/MinimalPage';
 import TextField from '../../../components/TextField';
 import useCanSubmit from '../../../hooks/useCanSubmit';

@@ -7,8 +7,8 @@ import React from 'react';
 import awsconfig from '../aws-exports';
 import AuthProvider from '../features/Auth/AuthProvider';
 import theme from '../styles/theme';
+import Consumers from './Consumers';
 import apolloClient from './apolloClient';
-import Consumers from './consumers';
 
 // Configure amplify
 Amplify.register(Auth);

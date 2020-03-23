@@ -3,7 +3,7 @@ import { cond } from 'ramda';
 import { useMemo } from 'react';
 import { FormContextValues } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router-dom';
-import { SIGN_IN_ROUTE } from '../../../app/consumers/routes';
+import { SIGN_IN_ROUTE } from '../../../app/routes';
 import {
   AmazonCognitoError,
   hasErrorCode,

@@ -2,7 +2,7 @@ import { useSnackbar } from 'notistack';
 import { cond } from 'ramda';
 import { useMemo } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import { SIGN_IN_ROUTE } from '../../../app/consumers/routes';
+import { SIGN_IN_ROUTE } from '../../../app/routes';
 import { hasErrorCode, useAmazonCognitoErrorHandlers } from '../../../services/Amazon/amazonCognito';
 
 export default () => {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Redirect, Switch } from 'react-router-dom';
-import ConfirmForgotPasswordContainer from '../../../features/Auth/ForgotPassword/ConfirmForgotPasswordContainer';
-import ForgotPasswordContainer from '../../../features/Auth/ForgotPassword/ForgotPasswordContainer';
-import SignInContainer from '../../../features/Auth/SignIn/SignInContainer';
-import ConfirmSignUpContainer from '../../../features/Auth/SignUp/ConfirmSignUpContainer';
-import SignUpContainer from '../../../features/Auth/SignUp/SignUpContainer';
-import LessonCreateContainer from '../../../features/Lessons/Form/LessonCreateContainer';
-import LessonUpdateContainer from '../../../features/Lessons/Form/LessonUpdateContainer';
-import LessonsContainer from '../../../features/Lessons/Table/LessonsContainer';
+import ConfirmForgotPasswordContainer from '../../features/Auth/ForgotPassword/ConfirmForgotPasswordContainer';
+import ForgotPasswordContainer from '../../features/Auth/ForgotPassword/ForgotPasswordContainer';
+import SignInContainer from '../../features/Auth/SignIn/SignInContainer';
+import ConfirmSignUpContainer from '../../features/Auth/SignUp/ConfirmSignUpContainer';
+import SignUpContainer from '../../features/Auth/SignUp/SignUpContainer';
+import LessonCreateContainer from '../../features/Lessons/Form/LessonCreateContainer';
+import LessonUpdateContainer from '../../features/Lessons/Form/LessonUpdateContainer';
+import LessonsContainer from '../../features/Lessons/Table/LessonsContainer';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 

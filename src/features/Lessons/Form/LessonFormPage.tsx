@@ -5,7 +5,7 @@ import { andThen, otherwise, pipe } from 'ramda';
 import React, { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link as RouterLink, useHistory } from 'react-router-dom';
-import { LESSONS_ROUTE } from '../../../app/consumers/routes';
+import { LESSONS_ROUTE } from '../../../app/routes';
 import Page from '../../../components/Page';
 import TextField from '../../../components/TextField';
 import useCanSubmit from '../../../hooks/useCanSubmit';
