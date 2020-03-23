@@ -1,5 +1,5 @@
 import { Button, Grid, Link } from '@material-ui/core';
-import { otherwise, pipe } from 'ramda';
+import { andThen, otherwise, pipe } from 'ramda';
 import React, { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { generatePath, Link as RouterLink, useHistory } from 'react-router-dom';
@@ -8,7 +8,6 @@ import MinimalPage from '../../../components/MinimalPage';
 import TextField from '../../../components/TextField';
 import useCanSubmit from '../../../hooks/useCanSubmit';
 import useFormStyles from '../../../styles/useFormStyles';
-import andThen from '../../../utils/andThen';
 import authValidationRules from '../authValidation';
 import useForgotPasswordErrorHandler from './useForgotPasswordErrorHandler';
 

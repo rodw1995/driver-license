@@ -1,7 +1,7 @@
 import { Button, Link, makeStyles } from '@material-ui/core';
 import { ChevronLeft } from '@material-ui/icons';
 import { useSnackbar } from 'notistack';
-import { otherwise, pipe } from 'ramda';
+import { andThen, otherwise, pipe } from 'ramda';
 import React, { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link as RouterLink, useHistory } from 'react-router-dom';
@@ -10,7 +10,6 @@ import Page from '../../../components/Page';
 import TextField from '../../../components/TextField';
 import useCanSubmit from '../../../hooks/useCanSubmit';
 import useFormStyles from '../../../styles/useFormStyles';
-import andThen from '../../../utils/andThen';
 import { LessonFormData } from '../lessonType';
 import lessonValidationRules from '../lessonValidation';
 
