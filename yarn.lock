@@ -1333,6 +1333,11 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
+"@rodw95/react-create-safe-context@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@rodw95/react-create-safe-context/-/react-create-safe-context-0.0.1.tgz#f8e7a302fb4446aa11d17951c410414b1250c150"
+  integrity sha512-Ad4DoZrX6QWNiTapjajsvK35TstWCvaB78VsGQUBprMxjWwlWvkCjXTQdY2789VSn8wEmkRQ3acFvU6ewM2OVg==
+
 "@rodw95/use-cancelable-promise@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@rodw95/use-cancelable-promise/-/use-cancelable-promise-0.0.2.tgz#9009172100b325b0d91a7e55a85e30abbbaf957d"

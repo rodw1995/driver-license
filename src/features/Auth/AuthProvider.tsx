@@ -1,9 +1,9 @@
 import { useApolloClient } from '@apollo/react-hooks';
 import Auth, { CognitoUser } from '@aws-amplify/auth';
+import createSafeContext from '@rodw95/react-create-safe-context';
 import useCancelablePromise from '@rodw95/use-cancelable-promise';
 import useDidMount from '@rooks/use-did-mount';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
-import createContext from '../../utils/createContext';
 
 export type AuthContextValue = {
   state: 'idle' | 'signingIn' | 'signedIn' | 'signingOut' | 'signedOut',
@@ -12,7 +12,7 @@ export type AuthContextValue = {
   signOut: () => Promise<void>,
 }
 
-const Context = createContext<AuthContextValue>();
+const Context = createSafeContext<AuthContextValue>();
 export const useAuthContext = Context.hook;
 
 type AuthProviderProps = {
